@@ -10,8 +10,10 @@ import org.springframework.stereotype.Service;
 @Service(value ="testSchedule")
 
 public class testSchedule {
-
+    //定时两种写法
     @Scheduled(cron = "3 * * * * ?")
+//    @Scheduled(fixedDelay = 3000)
+
     public void test4() {
         System.out.println(System.currentTimeMillis());
     }

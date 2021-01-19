@@ -5,6 +5,8 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
+
+//百度文字识别,导入对应的依赖或者jar  如果是jar包参考加入到library，maven直接找到对应的<dependency>
 public class Test_Word_Recognition {
     //设置APPID/AK/SK
     public static final String APP_ID = "23135425";

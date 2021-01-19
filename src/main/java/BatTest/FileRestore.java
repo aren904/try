@@ -14,6 +14,7 @@ import java.io.IOException;
  * @Date: 2021/1/13 17:38
  * @Version: 1.0
  */
+//通过io去写bat脚本
 public class FileRestore {
     public static void main(String[] args) {
         File file = new File("C:\\Users\\zxcdr\\Desktop\\学习笔记\\bat脚本学习\\start2.bat");

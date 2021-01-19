@@ -1,7 +1,7 @@
 package IoreadAndWrite;
 
 import java.io.*;
-
+//io写入文件内容
 public class IoWrite {
     public static void main(String[] args) throws FileNotFoundException {
         File file = new File("C:\\Users\\zxcdr\\Desktop\\tools\\Typora");

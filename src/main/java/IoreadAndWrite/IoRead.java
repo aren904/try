@@ -1,7 +1,7 @@
 package IoreadAndWrite;
 
 import java.io.*;
-
+//io读取文件内容
 public class IoRead {
     public static void main(String[] args) {
         File file = new File("C:\\Users\\zxcdr\\Desktop\\tools\\Typora");

@@ -7,7 +7,7 @@ import okhttp3.Response;
 import java.io.IOException;
 import java.util.Objects;
 
-//封装一个httputil工具类
+//封装一个httputil工具类，使用httputil去完成，导入okhttp对应的maven
 public class OkHttpApi {
     OkHttpClient client = new OkHttpClient();
 

@@ -10,7 +10,7 @@ import java.net.Socket;
  * @Date 2020/11/12 17:22
  * @CONTENT
  */
-
+//同时启动两个类去测通信，
 public class serversocket {
     public static void main(String[] args) {
         try {

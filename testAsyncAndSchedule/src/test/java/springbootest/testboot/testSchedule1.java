@@ -6,8 +6,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import springbootest.testboot.Async.TestAsync;
 import springbootest.testboot.Configuration.SpringContextUtil;
 import springbootest.testboot.t.testSchedule;
+
+import javax.annotation.Resource;
 
 /**
  * @ProjectName: try
@@ -19,14 +22,13 @@ import springbootest.testboot.t.testSchedule;
  * @Version: 1.0
  */
 @SpringBootTest
-@EnableScheduling
-@EnableAsync
 public class testSchedule1 {
-    @Autowired
-    SpringContextUtil springContextUtil;
+//    @Autowired
+//    SpringContextUtil springContextUtil;
+     //对于这块无法一直继续执行，保留疑问
     @Test
     public void test(){
-        testSchedule testSchedule1 = (testSchedule)springContextUtil.getBean("testSchedule");
-        testSchedule1.test4();
+     TestAsync testAsync = (TestAsync)SpringContextUtil.getBean("testAsync");
+        testAsync.test4();
     }
 }

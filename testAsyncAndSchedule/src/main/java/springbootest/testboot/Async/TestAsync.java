@@ -11,7 +11,10 @@ import org.springframework.stereotype.Service;
 @Service(value = "testAsync")
 
 public class TestAsync {
-    @Scheduled(fixedDelay = 1000)
+//    定时两种写法cron表达式，和fixedDelay
+
+//     @Scheduled(fixedDelay = 1000)
+       @Scheduled(cron = "*/1 * * * * ?")
     public void test4() {
         System.out.println(System.currentTimeMillis());
     }

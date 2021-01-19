@@ -8,7 +8,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 import java.util.Map;
-
+//通过访问http协议，获取网页的html信息
 public class TestHttpUtil {
 
     public static void main(String[] args) {

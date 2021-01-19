@@ -15,7 +15,7 @@ import springbootest.testboot.t.testSchedule;
 
 import javax.annotation.Resource;
 
-
+//测试异步方法
 public class Use_Async {
 
     public static void main(String[] args) throws InterruptedException {

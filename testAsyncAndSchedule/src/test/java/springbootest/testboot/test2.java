@@ -12,13 +12,14 @@ import springbootest.testboot.Configuration.SpringContextUtil;
 @SpringBootTest
 public class test2 {
 
-    @Autowired
-    SpringContextUtil springContextUtil;
+//    @Autowired
+//    SpringContextUtil springContextUtil;
 
+//对于这块无法一直继续执行，保留疑问
     @Test
     public void test() throws InterruptedException {
 
-        TestAsync testAsync = (TestAsync) springContextUtil.getBean("testAsync");
+        TestAsync testAsync = (TestAsync) SpringContextUtil.getBean("testAsync");
         testAsync.test1();
         testAsync.test2();
     }

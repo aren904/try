@@ -4,10 +4,11 @@ package testsocket;
 import java.io.*;
 import java.net.Socket;
 import java.net.UnknownHostException;
-
+//同时启动两个类去测通信，如果想测本地ip则host改为127.0.0.1
 public class socket {
     public static void main(String[] args) {
         try {
+            //其中host为想通信ip 8888为端口（此处8888端口未被占用）
             Socket s = new Socket("192.168.13.197",8888);
 //            Socket s = new Socket("127.0.0.1",8888);
 

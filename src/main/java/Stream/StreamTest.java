@@ -3,7 +3,7 @@ package Stream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
+//java8流式表达式,api熟悉
 public class StreamTest {
     public static void main(String[] args) {
         List<Integer> list=new ArrayList<>();
