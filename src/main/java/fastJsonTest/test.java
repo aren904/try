@@ -35,8 +35,10 @@ public class test {
         users.add(user2);
         users.add(user);
         System.out.println(array);
+        System.out.println("-----------------------------------------");
         List<JSONObject> jsonObjects = array.toJavaList(JSONObject.class);
         System.out.println(jsonObjects);
+        System.out.println("-----------------------------------------");
 //        =============================对user年龄进行排序========================================
 //        List<R> collect = jsonObjects.stream().map(User::getAge).collect(Collectors.toList());
 

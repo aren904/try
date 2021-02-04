@@ -14,7 +14,7 @@ import static java.util.stream.Collectors.toList;
  * @Package: Asynchronized.MethodTest
  * @ClassName: testCompleteFutureTak
  * @Author: zxcdr
- * @Description: CompleteFutureTask测试
+ * @Description: CompleteFutureTask测试,异步方法适用于需要超过1000毫秒的等待时长的操作间的操作否则，如果没有长时间操作同步方法即可，因为开启异步要消耗cpu资源
  * @Date: 2020/12/23 10:00
  * @Version: 1.0
  */

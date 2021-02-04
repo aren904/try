@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo" />
         <module name="testboot" />
+        <module name="trytry" />
         <module name="cache" />
         <module name="testSpringBoot" />
         <module name="try" />
@@ -23,6 +24,7 @@
       <module name="demo" options="-parameters" />
       <module name="springbootdataJpa" options="-parameters" />
       <module name="testboot" options="-parameters" />
+      <module name="trytry" options="-parameters" />
     </option>
   </component>
 </project>

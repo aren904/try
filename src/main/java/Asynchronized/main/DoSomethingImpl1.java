@@ -12,6 +12,7 @@ import Asynchronized.main.DoSomething;
  * @Version: 1.0
  */
 public class DoSomethingImpl1 implements DoSomething {
+
     @Override
     public String thing() {
         this.load();

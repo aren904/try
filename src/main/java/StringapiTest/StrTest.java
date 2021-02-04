@@ -40,9 +40,20 @@ public class StrTest {
             stringBuffer.append(a);
             stringBuffer.append(",");
         }
-        stringBuffer.deleteCharAt(stringBuffer.length()-1);
+        stringBuffer.deleteCharAt(stringBuffer.length() - 1);
 
         System.out.println(stringBuffer);
 
+    }
+
+    @Test
+    public void test33() {
+        String logs = "hello,my \"Mr liu\"";
+        int index = logs.indexOf("\"", logs.indexOf("Mr"));
+        int i = logs.indexOf("\"", logs.indexOf("hel"))+1;
+        System.out.println(index);
+        System.out.println(i);
+        String hhh=logs.substring(i,index);
+        System.out.println(hhh);
     }
 }

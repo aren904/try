@@ -1,0 +1,94 @@
+在配置数据库yml格式时注意：
+
+注意空格：“：”后一个空格，标识不要写错
+
+```
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/easy1?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 3190741
+```
+
+properties格式下：
+
+```
+spring.datasource.url=jdbc:mysql://localhost/greatesql?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&allowMultiQueries=true&autoReconnect=true
+spring.datasource.username=root
+spring.datasource.password=3190741
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+```
+
+
+
+
+
+mybatis格式（yml）：
+
+注意mapper-location是以斜杠分割不是以点分割 不论xml文件在src目录下还是在Resource下都要加classpath
+
+如果xml文件要在src下pom文件在build下加上
+
+```
+<resources>
+  <!--编译之后包含xml-->
+  <resource>
+    <directory>src/main/java</directory>
+    <includes>
+      <include>**/*.xml</include>
+    </includes>
+    <filtering>true</filtering>
+  </resource>
+</resources>
+```
+
+```
+mybatis:
+  mapper-locations: classpath:com/xkcoding/cache/redis/Mapper/*.xml
+  type-aliases-package: com.xkcoding.cache.redis.entity
+```
+
+mybatis格式（ properties）：
+
+```
+mybatis.mapper-locations=classpath:com/Mapper/*.xml
+mybatis.type-aliases-package=com.pojo
+```
+
+
+
+
+
+mapper下的xml文件格式
+
+```
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xkcoding.cache.redis.Dao.UserDao">
+
+<resultMap id="userMapper" type="User">
+  <id column="id" property="id"></id>
+  <result column="name" property="name"></result>
+</resultMap>
+
+  <delete id="deleteUserById" >
+    delete from user where id=#{id};
+  </delete>
+
+
+  <select id="findUserById"  resultMap="userMapper">
+    select * from user where id=#{id}
+  </select>
+```
+
+注意点用了mybatis.type-aliases-packaging之后不需要全限定类名只需类名即可，也可以在pojo类加上@Alias（“自定义类名”）即可完成namespace type部分的值
+
+也可以在数据查找方面加上判断空值情况（实际需求）
+
+最后注意字段的属性要与数据库对应，包名不要打错，
+
+启动类要加上@MapperScan（basepackages="xxxxx"）（for example ---com.xx.xx.Dao(指向持久层dao地址)）
+

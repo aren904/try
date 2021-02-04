@@ -22,8 +22,7 @@ public class testSuperCompleteFutureTask {
     public static void main(String[] args) {
         Long start=System.currentTimeMillis();
         List<DoSomething> doSomethings = Arrays.asList(new DoSomethingImpl1(), new DoSomethingImpl2(), new DoSomethingImpl3(), new DoSomethingImpl4(), new DoSomethingImpl5());
-        ExecutorService executorService = Executors.newFixedThreadPool(3);
-        List<CompletableFuture<String>> completableFutures = doSomethings.stream().map(DoSomething -> CompletableFuture.supplyAsync(DoSomething::thing)).collect(Collectors.toList());
+        List<CompletableFuture<String>> completableFutures = doSomethings.stream().map(doSomething -> CompletableFuture.supplyAsync(doSomething::thing)).collect(Collectors.toList());
         List<String> list = completableFutures.stream().map(CompletableFuture::join).collect(Collectors.toList());
         System.out.println(list);
         long end=System.currentTimeMillis();

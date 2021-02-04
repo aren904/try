@@ -10,8 +10,9 @@ public class IoRead {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
             String str = null;
             try {
-                while ((str = bufferedReader.readLine()) != null)
+                while ((str = bufferedReader.readLine()) != null) {
                     System.out.println(str);
+                }
                 fileInputStream.close();
             } catch (IOException e) {
                 e.printStackTrace();

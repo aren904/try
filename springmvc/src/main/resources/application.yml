@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    username: root
+    password: 3190741
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/people?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&allowMultiQueries=true&autoReconnect=true
+
+mybatis:
+  mapper-locations: classpath:com/aren/trytry/Mapper/*.xml
+  type-aliases-package: com.aren.trytry.PoJo
+
+server:
+  port: 9091
+
+#people:
+#   age: 90
+#   name: aren
