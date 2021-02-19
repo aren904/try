@@ -12,7 +12,8 @@ import java.util.concurrent.*;
  * @Version: 1.0
  */
 public class RunAsync {
-    private static final ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(8,8,1, TimeUnit.MINUTES,new LinkedBlockingDeque<>(10));
+    private static final ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(8, 8, 1, TimeUnit.MINUTES, new LinkedBlockingDeque<>(10));
+
     public static void main(String[] args) {
 //        try {
 //            runAsync();
@@ -21,15 +22,15 @@ public class RunAsync {
 //        } catch (ExecutionException e) {
 //            e.printStackTrace();
 //        }
-threadPoolExecutor.execute(() -> {
-    try {
-        runAsync();
-    } catch (InterruptedException e) {
-        e.printStackTrace();
-    } catch (ExecutionException e) {
-        e.printStackTrace();
-    }
-});
+        threadPoolExecutor.execute(() -> {
+            try {
+                runAsync();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     public static void runAsync() throws InterruptedException, ExecutionException {
@@ -43,7 +44,7 @@ threadPoolExecutor.execute(() -> {
                 }
                 System.out.println("over");
             }
-        },threadPoolExecutor);
+        }, threadPoolExecutor);
         System.out.println(future.get());
 //        System.out.println(Thread.currentThread().getName());
     }
