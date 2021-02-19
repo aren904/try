@@ -11,9 +11,12 @@
         <module name="testboot" />
         <module name="trytry" />
         <module name="cache" />
+        <module name="demo (2) (com.springboot.JPA)" />
         <module name="testSpringBoot" />
-        <module name="try" />
+        <module name="TrySomeThing" />
         <module name="springbootdataJpa" />
+        <module name="try" />
+        <module name="demo (1) (com.fileupload)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />
@@ -22,6 +25,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cache" options="-parameters" />
       <module name="demo" options="-parameters" />
+      <module name="demo (1) (com.fileupload)" options="-parameters" />
+      <module name="demo (2) (com.springboot.JPA)" options="-parameters" />
       <module name="springbootdataJpa" options="-parameters" />
       <module name="testboot" options="-parameters" />
       <module name="trytry" options="-parameters" />

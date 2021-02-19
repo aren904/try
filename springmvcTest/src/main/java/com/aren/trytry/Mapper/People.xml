@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aren.trytry.Dao.PeopleDao">
+    <!--    <resultMap id="peopleMap" type="com.aren.trytry.PoJo.People">-->
+    <!--        <id column="id" property="id"/>-->
+    <!--        <result column="name" property="name"/>-->
+    <!--    </resultMap>-->
+
+    <select id="searchPeopleById" resultType="com.aren.trytry.PoJo.People">
+     select * from people where id =#{id}
+    </select>
+
+
+    <insert id="addPeople" parameterType="com.aren.trytry.PoJo.People" >
+        insert into people(id,name)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id},#{item.name})
+        </foreach>
+    </insert>
+
+
+
+
+</mapper>
